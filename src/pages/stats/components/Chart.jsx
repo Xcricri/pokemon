@@ -8,7 +8,6 @@ import {
     FaHeart,
     FaFistRaised,
     FaShieldAlt,
-    FaBolt,
     FaMagic,
     FaRunning,
     FaArrowLeft
@@ -21,7 +20,7 @@ const statIcons = {
     "special-attack": <FaMagic className="text-purple-500 text-2xl" />,
     "special-defense": <FaShieldAlt className="text-teal-500 text-2xl" />,
     speed: <FaRunning className="text-green-500 text-2xl" />,
-    back: <FaArrowLeft className="text-gray-300 text-2xl" />,
+    back: <FaArrowLeft className="text-gray-700 dark:text-gray-300 text-2xl" />,
 }
 
 const Chart = () => {
@@ -40,16 +39,16 @@ const Chart = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                         {/* LEFT → POKEMON */}
-                        <div className="flex flex-col items-center justify-center rounded-xl p-6 text-white relative">
-                            <Link to={'/'} className="self-start mb-2">
+                        <div className="flex flex-col items-center justify-center rounded-xl p-6 text-gray-700 dark:text-white relative">
+                            <Link to={'/'} className="self-start mb-2 ">
                                 {statIcons.back}
                             </Link>
 
-                            <figure className="rounded-full p-4 justify-center items-center bg-gradient-to-b from-gray-800 to-gray-700">
+                            <figure className="rounded-full p-4 justify-center items-center bg-gradient-to-b dark:from-gray-800 dark:to-gray-700 from-gray-200 to-gray-300">
                                 <img
                                     src={image}
                                     alt={name}
-                                    className="w-40 h-40 object-contain"
+                                    className="w-40 h-40 object-contain rendering-pixelated"
                                 />
                             </figure>
 
