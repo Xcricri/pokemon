@@ -1,0 +1,23 @@
+import React from "react";
+import AppRoutes from "./Routes/app.routes";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import "./App.css";
+
+function App() {
+    return (
+        <>
+            <div className="min-h-screen flex flex-col ">
+                <Header />
+
+                <main className="flex-grow">
+                    <AppRoutes />
+                </main>
+
+                <Footer />
+            </div>
+        </>
+    );
+}
+
+export default App;
